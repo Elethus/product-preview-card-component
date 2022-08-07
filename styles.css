@@ -1,0 +1,172 @@
+@charset "UTF-8";
+@import url(./reset.css);
+
+:root {
+  --color-primary: hsl(158, 36%, 37%);
+  --color-primary-dark: hsl(158, 36%, 17%);
+  --color-secondary: hsl(30, 38%, 92%);
+
+  --color-neutral: hsl(228, 12%, 48%);
+  --color-neutral-light: hsl(0, 0%, 100%);
+  --color-neutral-dark: hsl(212, 21%, 14%);
+
+  --ff-primary: 'Montserrat', sans-serif;
+  --ff-accent: 'Fraunces', serif;
+
+  --fw-regular: 500;
+  --fw-bold: 700;
+
+  --fs-small: 1.3rem;
+  --fs-medium: 1.4rem;
+  --fs-large: 3.2rem;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+
+  font-size: 10px;
+
+  background-color: var(--color-secondary);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100%;
+  padding: 0 1.5rem;
+
+  color: var(--color-neutral);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-medium);
+  font-weight: var(--fw-regular);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Card */
+
+.card {
+  max-width: 600px;
+  min-width: 290px;
+
+  background-color: var(--color-neutral-light);
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.card-thumb {
+  display: block;
+  height: 100%;
+  max-width: 100%;
+
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 25px;
+}
+
+.card-category {
+  margin-bottom: 13px;
+
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+
+.card-title {
+  margin-bottom: 17px;
+
+  color: var(--color-neutral-dark);
+  font-family: var(--ff-accent);
+  font-size: var(--fs-large);
+}
+
+.card-description {
+  margin-bottom: 25px;
+
+  line-height: 1.6;
+}
+
+.card-price {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  font-size: var(--fs-small);
+}
+
+.price-current {
+  margin-right: 19px;
+
+  color: var(--color-primary);
+  font-family: var(--ff-accent);
+  font-size: var(--fs-large);
+}
+
+.price-original {
+  text-decoration: line-through;
+}
+
+.card-button {
+  height: 3.5em;
+  width: 100%;
+
+  border: none;
+  border-radius: .5em;
+
+  background-color: var(--color-primary);
+
+  color: var(--color-neutral-light);
+  font-family: var(--ff-primary);
+  font-weight: var(--fw-bold);
+}
+
+.card-button:hover, button:focus {
+  background-color: var(--color-primary-dark);
+  cursor: pointer;
+}
+
+.card-button .icon {
+  margin-right: .5em;
+
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 540px) {
+  .card {
+    display: flex;
+  }
+
+  .card > * {
+    width: 50%;
+  }
+
+  .card-content {
+    padding: 32px;
+  }
+
+  .card-category {
+    margin-bottom: 22px;
+  }
+
+  .card-title {
+    margin-bottom: 24px;
+  }
+
+  .card-description {
+    margin-bottom: 32px;
+  }
+
+  .card-price {
+    margin-bottom: 30px;
+  }
+}
