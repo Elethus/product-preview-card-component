@@ -31,12 +31,14 @@ html {
 }
 
 body {
+  position: relative;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
   min-height: 100%;
-  padding: 0 1.5rem;
+  padding: 3rem 1.5rem;
 
   color: var(--color-neutral);
   font-family: var(--ff-primary);
@@ -139,6 +141,26 @@ body {
   margin-right: .5em;
 
   vertical-align: middle;
+}
+
+/* Footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+}
+
+.attribution {
+  padding: 1em;
+
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media only screen and (min-width: 540px) {
