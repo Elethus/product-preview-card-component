@@ -60,6 +60,7 @@ body {
 
   background-color: var(--color-neutral-light);
   border-radius: 10px;
+  box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
 
   overflow: hidden;
 }
@@ -77,8 +78,9 @@ body {
 }
 
 .card-category {
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 
+  font-size: var(--fs-small);
   letter-spacing: .25em;
   text-transform: uppercase;
 }
@@ -130,6 +132,8 @@ body {
   color: var(--color-neutral-light);
   font-family: var(--ff-primary);
   font-weight: var(--fw-bold);
+
+  transition: background-color .3s;
 }
 
 .card-button:hover, button:focus {
